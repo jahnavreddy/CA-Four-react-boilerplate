@@ -1,3 +1,6 @@
+
+
+User
 .play{
   width: 100px;
   height: 30px;
@@ -213,15 +216,6 @@ body{
 
   }
 
-  .button-1:hover,
-  .button-2:hover,
-  .button-3:hover,
-  .button-4:hover {
-    background-color: cyan;
-    transform: translateY(0);
-  }
-}
-
   .theme-toggle{
     margin-left: 50%;
     width: 175px;
@@ -325,3 +319,4 @@ body{
 
 
   
+}
