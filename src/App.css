@@ -246,6 +246,12 @@ body{
     font-size: 15px;
   }
 
+  .button-1:hover , .button-2:hover , .button-3:hover ,.button-4:hover{
+    background-color: cyan;
+  }
+
+ 
+
   .button-2{
     margin-top: 5%;
     margin-left: -40%;
