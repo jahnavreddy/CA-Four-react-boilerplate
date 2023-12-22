@@ -1,0 +1,327 @@
+.play{
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+body{
+  text-align: center;
+
+}
+
+.buttons-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.buttons-bottom{
+  display: flex;
+  justify-content: center;
+
+}
+
+.button-1, .button-2, .button-3, .button-4 {
+  width: 450px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: cyan;
+  font-size: larger;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-1:hover {
+  background-color: lightcoral;
+  transform: translateY(-5px);
+}
+
+.button-2:hover {
+  background-color: lightcoral;
+  transform: translateY(-5px);
+}
+
+.button-3:hover{
+  background-color: lightcoral;
+  transform: translateY(-5px);
+}
+
+.button-4:hover{
+  background-color: lightcoral;
+  transform: translateY(-5px);
+}
+
+.button-2,.button-4{
+  margin-left: 50px;
+}
+
+.previous{
+  background-color: beige;
+  width: 100px;
+  height: 25px;
+  border-radius: 10px;
+}
+
+.next{
+  background-color: lightpink;
+  width: 100px;
+  height: 25px;
+  border-radius: 10px;
+}
+
+.high_question {
+  font-size: 30px;
+} 
+.dark_question{
+  font-size: 40px;
+}
+
+.quiz-result{
+  color:"cornflowerblue"
+}
+
+.quit,.high-light{
+  background-color:lightblue;
+  width: 120px;
+  height: 30px;
+  font-size: large;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.quit{
+  margin-left: 1%;
+}
+
+.options{
+  margin-top: 100px;
+}
+
+.unleash{
+  margin-top: -10%;
+}
+
+.quizQuestions{
+  margin-top: 6%;
+}
+
+.theme-toggle{
+  width: 225px;
+  height: 30px;
+  background: cyan;
+  font-size: large;
+  border-radius: 20px;
+  margin-left: 80%;
+  margin-top: 2%;
+}
+
+.tick-image{
+  height:200px;
+  margin-Left:-80%;
+}
+
+.getStarted{
+  width: 200px;
+  height: 30px;
+  margin-top: 18%;
+  font-size: x-large;
+  background-color: gainsboro;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.getStarted {
+  animation: fadeIn 1s;
+}
+
+.result-page{
+  margin-top: 8%;
+  border: 1px solid black;
+  width: 1200px;
+  margin-left: 12.5%;
+  height: 400px;
+  background-color: lavender;
+  color: black;
+  
+}
+
+.get-button{
+  display: flex;
+}
+
+.result-toggle{
+  width: 150px;
+  margin-top: 2%;
+  height: 25px;
+  font-size: large;
+  border-radius: 10px;
+  background: lavender;
+}
+
+.gohome{
+  margin-top: 4%;
+  width: 175px;
+  height: 25px;
+  border-radius: 20px;
+  font-size: large;
+  margin-left: 1%;
+}
+
+.play-again{
+  width: 150px;
+  height: 25px;
+  border-radius: 20px;
+  font-size: large;
+}
+
+.pointing-image{
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.kalvium-logo{
+  height: 50px;
+  margin-top: -1%;
+  margin-left: 80%;
+}
+
+.feedback{
+  color: red;
+}
+
+
+@media screen and (max-width:400px)  {
+  .buttons-top,.buttons-bottom{
+    display: flex;
+    flex-direction: column;
+    margin: auto ;
+    justify-content: center;
+    align-items: center;
+
+    
+
+  }
+
+  .button-1:hover,
+  .button-2:hover,
+  .button-3:hover,
+  .button-4:hover {
+    background-color: cyan;
+    transform: translateY(0);
+  }
+}
+
+  .theme-toggle{
+    margin-left: 50%;
+    width: 175px;
+    font-size: medium;
+
+  }
+
+  .result-page{
+    width: 350px;
+    margin-left: 6%;
+    margin-top: 25%;
+  }
+
+  .unleash{
+    margin-left: 25%;
+  }
+
+  .tick-image{
+    height: 100px;
+    margin-left: -60%;
+  }
+
+
+  .button-1{
+    margin-left: -40%;
+    width: 380px;
+    height: 50px;
+    font-size: 15px;
+  }
+
+  .button-2{
+    margin-top: 5%;
+    margin-left: -40%;
+    width: 380px;
+    height: 50px;
+    font-size: 15px;
+
+
+  }
+
+  .button-3{
+    margin-left: -35%;
+    width: 380px;
+    height: 50px;
+    font-size: 15px;
+
+
+  }
+
+  .button-4{
+    margin-left: -35%;
+    margin-top: 5%;
+    width: 380px;
+    font-size: 15px;
+    height: 50px;
+
+  }
+
+  .quizQuestions{
+    margin-left: 25%;
+
+  }
+
+  .high_question{
+    font-size: 20px;
+    margin-left: -35%;
+  }
+
+  .dark_question{
+    font-size: 30px;
+    margin-left: -35%;
+
+  }
+
+  .pointing-image{
+    height: 200px;
+  }
+
+
+  .question_name{
+    font-size: 18px;
+    margin-left: -35%;
+    
+  }
+
+  .question-number{
+    margin-left: -35%;
+
+  }
+
+  .getStarted{
+    font-size: 15px;
+    width: 100px;
+  }
+
+  .kalvium-logo{
+    width: 100px;
+    margin-left: 60%;
+    margin-top: 40%;
+  }
+
+
+  
