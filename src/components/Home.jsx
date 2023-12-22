@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import QuestionBox from './QuestionBox';
 
 function Home() {
+
+  //destructuring of arrays using usestate
+
+
   const [quizStarted, setQuizStarted] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  //conditional rendering for toggletheme button
 
 
   const toggleDarkMode = () => {
@@ -15,6 +21,8 @@ function Home() {
   const start = () => {
     setQuizStarted(true);
   };
+
+  //html using react
 
   return (
     <div>

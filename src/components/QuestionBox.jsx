@@ -4,6 +4,9 @@ import Result from "./Result";
 import Home from "./Home";
 
 function QuestionBox() {
+
+  //destructuring of arrays using usestate
+
   const [q_no, setQ_no] = useState(0);
   const [isHome, setIsHome] = useState(false);
   const [isResult, setIsResult] = useState(false);
@@ -15,6 +18,8 @@ function QuestionBox() {
     setHighlight(!highlight)
   }
 
+  //conditional rendering for toggletheme button
+
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
     document.body.style.backgroundColor = isDarkMode ? "white" : "black";
@@ -25,9 +30,13 @@ function QuestionBox() {
     setIsHome(true);
   };
 
+  //returning to home if isHome is true
+
   if(isHome){
     return <Home />
   }
+
+  //increasing score if correct option is selected
 
   const handleOptionClick = (selectedOption) => {
     const correctOption = questions[q_no].answer;
@@ -35,6 +44,8 @@ function QuestionBox() {
     if (selectedOption === correctOption) {
       setCount(count + 1);
     }
+
+    //returning to result page if all the questions are completed answering
 
     if (q_no < questions.length - 1) {
       setQ_no(q_no + 1);
@@ -44,6 +55,8 @@ function QuestionBox() {
   };
 
   const currentQuestion = questions[q_no];
+
+  //sending the score to result through props
 
   if (isResult) {
     return <Result count={count} />;

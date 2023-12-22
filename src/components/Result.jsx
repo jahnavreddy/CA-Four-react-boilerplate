@@ -3,6 +3,9 @@ import QuestionBox from './QuestionBox';
 import Home from './Home';
 
 export default function Result({ count }) {
+
+  //destructuring of arrays using usestate
+
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isQuiz,setIsQuiz] = useState(false)
   const [isHome,setIsHome] = useState(false)
@@ -11,9 +14,14 @@ export default function Result({ count }) {
     setIsHome(!isHome)
   }
 
+  //returning to home if isHome is true
+
+
   if(isHome){
     return <Home />
   }
+
+    //calculating the percentage of the score
 
   const Percentage = ((count / 15) * 100);
   const roundedPercentage = Math.ceil(Percentage)
@@ -22,14 +30,21 @@ export default function Result({ count }) {
     setIsQuiz(!isQuiz)
   }
 
+  //returning to questionbox if isquiz is true
+
   if(isQuiz){
     return <QuestionBox />
   }
+
+  //conditional rendering for toggletheme button
+
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
     document.body.style.backgroundColor = isDarkMode ? 'white' : 'black';
   };
+
+  //giving phrases for each described score
 
   let phrase = '';
   if (count <= 5) {
@@ -39,6 +54,8 @@ export default function Result({ count }) {
   } else {
     phrase = 'Impressive';
   }
+
+  //html using react
 
   return (
     <div className='results'>
