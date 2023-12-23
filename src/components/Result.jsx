@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import QuestionBox from './QuestionBox';
 import Home from './Home';
 
-export default function Result({ count }) {
+export default function Result({ isDarkMode , setIsDarkMode ,  count }) {
 
   //destructuring of arrays using usestate
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isQuiz,setIsQuiz] = useState(false)
   const [isHome,setIsHome] = useState(false)
 

@@ -3,7 +3,7 @@ import questions from "../questions";
 import Result from "./Result";
 import Home from "./Home";
 
-function QuestionBox() {
+function QuestionBox({isDarkMode , setIsDarkMode }) {
 
   //destructuring of arrays using usestate
 
@@ -11,7 +11,6 @@ function QuestionBox() {
   const [isHome, setIsHome] = useState(false);
   const [isResult, setIsResult] = useState(false);
   const [count, setCount] = useState(0);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [highlight,setHighlight] = useState(false);
 
   const changeColour = ()=>{
@@ -41,7 +40,7 @@ function QuestionBox() {
   const handleOptionClick = (selectedOption) => {
     const correctOption = questions[q_no].answer;
 
-    if (selectedOption === correctOption) {
+    if (selectedOption === correctOption ) {
       setCount(count + 1);
     }
 
@@ -59,7 +58,7 @@ function QuestionBox() {
   //sending the score to result through props
 
   if (isResult) {
-    return <Result count={count} />;
+    return <Result setIsDarkMode={setIsDarkMode}  isDarkMode={isDarkMode} count={count} />;
   }
 
   return (
